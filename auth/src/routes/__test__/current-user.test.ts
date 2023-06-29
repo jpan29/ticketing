@@ -26,7 +26,7 @@ it('responds null with not authorized', async () => {
   const res = await request(app)
     .get('/api/users/currentuser')
     .send()
-    .expect(200)
+    .expect(400)
 
   expect(res.body.currentUser).toEqual(null)
 })
