@@ -2,7 +2,7 @@ import express from 'express'
 import { currentUser } from '@jpticketing/common'
 
 const router = express.Router()
-
+//current user router
 router.get('/api/users/currentuser', currentUser, (req, res) => {
   res.send({ currentUser: req.currentUser || null })
 })
